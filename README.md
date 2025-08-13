@@ -86,13 +86,13 @@ run each cell one by one from top to bottom
 
 
 ## Limitations
-1. Time: Due to time limitations I haven't did the modular coding and Deep R&D.
-     1.1 Components
-     1.2 Config
-     1.3 Constants
-     1.4 Entity
-     1.5 Exception handling
-     1.6 Logging
-     1.7 Pipeline
-     1.8 utils
+1. Time: Due to time limitations I haven't did the modular coding and Deep R&D.  
+     1.1 Components  
+     1.2 Config  
+     1.3 Constants  
+     1.4 Entity  
+     1.5 Exception handling  
+     1.6 Logging  
+     1.7 Pipeline  
+     1.8 utils  
    
