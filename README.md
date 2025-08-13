@@ -45,4 +45,41 @@ run each cell one by one from top to bottom
 6. RefineChain For Summarization
 
 ### How to improve accuracy for summarization  
+1. Preprocessing the input text
+   * Clean & normalize: Remove OCR noise, weird symbols, duplicate spaces, etc.
+   * Split logically: Break long documents into semantically coherent chunks (e.g., by paragraphs, sections) to avoid context loss.
+   * Preserve structure: Keep headings, bullet points, and metadata if they’re important for meaning.
+   * Remove irrelevant sections (like disclaimers or repeated boilerplate).
+   
+2. Prompt Engineering
+   * Set clear instructions: Tell the model exactly what kind of summary you want — short/long, factual, in bullet points, with no         opinions, etc.
+   * Explicit constraints: For accuracy, say:
+     "Summarize the text in 5 bullet points, only using facts from the text.
+     Do not add extra information."
+   * Role priming:
+     “You are a professional technical summarizer who only extracts key facts without interpretation.”
+   * Include examples: Few-shot prompting helps the model learn your preferred style.
+   * Multi-step prompting: First extract key points, then condense them.
 
+3. Using Retrieval-Augmented Generation(RAG)
+   * Store your documents in a vector database (e.g., FAISS, Pinecone, Weaviate).
+   * Retrieve only the most relevant parts before summarization.
+   * This reduces hallucination by limiting the model’s input to contextually relevant data.
+   
+4. Model and Parameter choise
+   * Bigger ≠ always better: Try models tuned for summarization (e.g., OpenAI gpt-4o-mini, Anthropic Claude 3, Llama 3-Instruct,           Flan-     T5 XXL).
+   * Temperature: Lower values (0.0–0.3) make the model more deterministic and factual.
+   * Max tokens: Give enough output space so the summary doesn’t cut off.
+   
+5. Post-processing and verification
+   * Fact-checking loop: After generating the summary, re-prompt the model:
+       “Verify the following summary against the source text. Mark any incorrect or unsupported statements.”
+       Compare multiple outputs: Generate 2–3 summaries and merge consistent points.
+   * Named entity consistency check: Ensure names, numbers, and dates match the source.
+6. Advanced Techniques
+   * Chain-of-Thought Summarization: First extract facts → then compress into a summary.
+   * Map-Reduce Summarization:
+       * Map: Summarize each chunk individually.
+       * Reduce: Summarize the summaries into a final version.
+   * Fine-tuning / LoRA adapters: Train the model on examples of your ideal summaries.
+   * Evaluation with ROUGE/BERTScore: Measure overlap with reference summaries.
