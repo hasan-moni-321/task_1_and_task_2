@@ -17,13 +17,13 @@ touch .env
 step 5. write simple code in .env file for openai_api_key. replace your_openai_api_key with your actual openai api key.    
 OPENAI_API_KEY="your_openai_api_key"    
 
-### How to run task 1    
+## How to run task 1    
 run each cell one by one from top to bottom  
 
-### How to run task 2    
+## How to run task 2    
 run each cell one by one from top to bottom  
 
-### Technology I used for this application
+## Technology I used for this application
 1. pdfplumber (for reading table based pdf data)
 2. pypdf (very smooth for LangChain based applicaton for pdf data reading)
 3. LangChain
@@ -36,7 +36,7 @@ run each cell one by one from top to bottom
 10. retriever
 11. gpt-4o model from openAI
 
-### Different technique for summarization  
+## Different technique for summarization  
 1. Text Summarization Using Langchain
 2. Prompt Templates Text Summarization
 3. StuffDocumentChain Text Summarization
@@ -44,7 +44,7 @@ run each cell one by one from top to bottom
 5. Map Reduce With Custom Prompts
 6. RefineChain For Summarization
 
-### How to improve accuracy for summarization  
+## How to improve accuracy for summarization  
 1. Preprocessing the input text
    * Clean & normalize: Remove OCR noise, weird symbols, duplicate spaces, etc.
    * Split logically: Break long documents into semantically coherent chunks (e.g., by paragraphs, sections) to avoid context loss.
