@@ -84,6 +84,13 @@ run each cell one by one from top to bottom
    * Fine-tuning / LoRA adapters: Train the model on examples of your ideal summaries.
    * Evaluation with ROUGE/BERTScore: Measure overlap with reference summaries.
 
+## Future Work
+1. BackEnd with modular coding
+2. DataBase Design
+3. FrontEnd using Django/Flask/React.js/Streamlit
+4. Dockerize the application using Docker/Docker-compose
+5. Deploy app with Kubernetes with multi-pod for millions users
+6. Use Cloud service for deployment AWS/Azure/GCP
 
 ## Limitations
 1. Time: Due to time limitations I haven't did the modular coding and Deep R&D.  
