@@ -83,3 +83,16 @@ run each cell one by one from top to bottom
        * Reduce: Summarize the summaries into a final version.
    * Fine-tuning / LoRA adapters: Train the model on examples of your ideal summaries.
    * Evaluation with ROUGE/BERTScore: Measure overlap with reference summaries.
+
+
+## Limitations
+1. Time: Due to time limitations I haven't did the modular coding and Deep R&D.
+     1.1 Components
+     1.2 Config
+     1.3 Constants
+     1.4 Entity
+     1.5 Exception handling
+     1.6 Logging
+     1.7 Pipeline
+     1.8 utils
+   
