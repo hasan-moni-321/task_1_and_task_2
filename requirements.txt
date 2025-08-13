@@ -1,0 +1,9 @@
+pdfplumber
+langchain
+langgraph
+langchain-openai
+pypdf
+faiss-cpu
+langchain-community
+python-dotenv
+matplotlib
